@@ -1,0 +1,13 @@
+#Spring Boot + Spring LDAP Integration Testing Example
+
+spring:
+  ldap:
+    embedded:
+      base-dn: dc=imperial,dc=nhs,dc=uk
+      credential:
+        username: uid=admin
+        password: secret
+      ldif: classpath:test-schema.ldif
+      port: 12345
+      validation:
+        enabled: false
